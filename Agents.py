@@ -1,14 +1,14 @@
 from crewai import Agent,LLM
-from crewai_tools import SerperDevTool,ScrapeWebsiteTool
+from crewai_tools import ScrapeWebsiteTool
 #from key import gooogle_api_key
 from tools import scraper,serper
 import google.generativeai as genai
 import os
-from crewai_tools import SerperDevTool, ScrapeWebsiteTool
+from crewai_tools import ScrapeWebsiteTool
 
 
 scraper = ScrapeWebsiteTool()
-serper = SerperDevTool()
+# serper = SerperDevTool()
 # llm = LLM(
 #     model="gemini/gemini-1.5-flash",
 #     temperature=0.7,
