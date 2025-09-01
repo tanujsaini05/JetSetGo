@@ -4,9 +4,11 @@ from crewai_tools import SerperDevTool,ScrapeWebsiteTool
 from tools import scraper,serper
 import google.generativeai as genai
 import os
+from crewai_tools import SerperDevTool, ScrapeWebsiteTool
 
-os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 
+scraper = ScrapeWebsiteTool()
+serper = SerperDevTool()
 # llm = LLM(
 #     model="gemini/gemini-1.5-flash",
 #     temperature=0.7,

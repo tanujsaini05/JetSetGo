@@ -1,4 +1,5 @@
-streamlit
+fastapi
+uvicorn
 crewai
 crewai-tools
 google-generativeai
