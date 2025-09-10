@@ -6,4 +6,4 @@ crewai==0.177.0
 python-dotenv==1.0.0
 google-generativeai==0.3.2
 crewai-tools==0.69.0
-adata==0.3.1
+adata==2.9.4
