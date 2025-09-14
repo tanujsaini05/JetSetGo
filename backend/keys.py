@@ -1,2 +1,0 @@
-gooogle_api_key= "AIzaSyCWsERTyOG5HZZ4spLR1LYCxJ2XkUYbmVA"
-serper_api_key= "712e72ffecebdefcc6884119b3b08711b62144f8"

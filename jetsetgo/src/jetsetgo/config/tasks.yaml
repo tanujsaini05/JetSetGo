@@ -1,0 +1,15 @@
+tasks:
+  - name: plan_trip
+    description: |
+      Plan a detailed itinerary from {origin} to {destination} for {num_people} people,
+      lasting {days} days, starting on {start_date}, within a budget of {budget} USD.
+      Include daily activities, meals, transportation, and cost breakdowns.
+    agent: travel_planner_agent
+    expected_output: A comprehensive day-by-day travel plan with timestamps, locations, costs, and tips.
+
+  - name: book_travel
+    description: |
+      Book flights and accommodations for the planned trip using the itinerary details.
+      Provide confirmation numbers, prices, hotel names, flight times, and links.
+    agent: booking_agent
+    expected_output: A booking summary with all reservations, prices, and confirmation codes.
