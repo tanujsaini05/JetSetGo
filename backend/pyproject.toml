@@ -1,0 +1,19 @@
+[project]
+name = "JetSetGo"
+version = "0.1.0"
+description = "AI-powered trip planner using CrewAI and FastAPI"
+authors = [{ name = "Tanuj", email = "sainisab264319@gmail.com" }]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "crewai",
+    "langchain",
+    "openai",
+    "python-dotenv",
+    "pydantic",
+]
+
+[tool.uvicorn]
+host = "0.0.0.0"
+port = 8000
+reload = true
