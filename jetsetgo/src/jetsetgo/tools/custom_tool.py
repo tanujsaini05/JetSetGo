@@ -1,19 +1,8 @@
-from crewai.tools import BaseTool
-from typing import Type
-from pydantic import BaseModel, Field
+# src/JetSetGo/tools/custom_tool.py
+# Required by CrewAI structure — even if empty.
+# Built-in tools (SerperDevTool, ScrapeWebsiteTool) are auto-imported via crewai[tools].
+from crewai.tools import SerperDevTool, ScrapeWebsiteTool
 
-
-class MyCustomToolInput(BaseModel):
-    """Input schema for MyCustomTool."""
-    argument: str = Field(..., description="Description of the argument.")
-
-class MyCustomTool(BaseTool):
-    name: str = "Name of my tool"
-    description: str = (
-        "Clear description for what this tool is useful for, your agent will need this information to use it."
-    )
-    args_schema: Type[BaseModel] = MyCustomToolInput
-
-    def _run(self, argument: str) -> str:
-        # Implementation goes here
-        return "this is an example of a tool output, ignore it and move along."
+# Optional: Define tool instances (used internally by CrewAI)
+serper_tool = SerperDevTool()
+scrape_tool = ScrapeWebsiteTool()

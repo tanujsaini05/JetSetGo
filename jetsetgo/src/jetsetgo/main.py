@@ -1,7 +1,7 @@
 # src/JetSetGo/main.py
 from fastapi import FastAPI
 from pydantic import BaseModel
-from src.jetsetgo.crew import jetsetgo_crew
+from src.JetSetGo.crew import jetsetgo_crew
 
 app = FastAPI(title="JetSetGo AI Trip Planner", version="1.0")
 

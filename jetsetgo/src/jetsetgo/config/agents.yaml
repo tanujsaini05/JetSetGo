@@ -1,26 +1,34 @@
 agents:
   - name: travel_planner_agent
     role: Senior Travel Planner
-    goal: Plan an optimal trip based on budget, dates, and preferences
+    goal: Plan an optimal trip based on budget, dates, and live web data
     backstory: |
       You are an expert travel planner with decades of experience.
-      You know hidden gems, best flight deals, and how to maximize comfort within budget.
+      You use real-time search and website scraping to find the best flights,
+      hotels, and activities within budget. You verify prices and availability.
     llm:
       provider: google
-      model: gemini-1.5-flash  # ← Uses your model, not gpt-4o
+      model: gemini-1.5-flash
       temperature: 0.7
     allow_delegation: true
     verbose: true
+    tools:
+      - SerperDevTool
+      - ScrapeWebsiteTool
 
   - name: booking_agent
     role: Booking Specialist
-    goal: Book flights and hotels based on the itinerary
+    goal: Book flights and hotels based on the itinerary using live data
     backstory: |
-      You specialize in real-time booking systems and can secure the best rates
-      across platforms like Expedia, Google Flights, and Airbnb.
+      You specialize in real-time booking systems. You use search and scraping
+      to find confirmed deals, check cancellation policies, and extract contact info.
+      You never guess — you always verify with live data.
     llm:
       provider: google
-      model: gemini-1.5-flash   # ← Uses your model, not gpt-4o
+      model: gemini-1.5-flash
       temperature: 0.6
     allow_delegation: false
     verbose: true
+    tools:
+      - SerperDevTool
+      - ScrapeWebsiteTool

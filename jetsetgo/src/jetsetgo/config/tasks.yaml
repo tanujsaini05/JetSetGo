@@ -3,13 +3,19 @@ tasks:
     description: |
       Plan a detailed itinerary from {origin} to {destination} for {num_people} people,
       lasting {days} days, starting on {start_date}, within a budget of {budget} USD.
-      Include daily activities, meals, transportation, and cost breakdowns.
+      Use SerperDevTool to search for top-rated flights, hotels, and activities.
+      Use ScrapeWebsiteTool to extract real-time pricing, reviews, and availability from
+      trusted sites like Expedia, Google Hotels, or TripAdvisor.
+      Include daily schedules, costs, links, and tips.
     agent: travel_planner_agent
-    expected_output: A comprehensive day-by-day travel plan with timestamps, locations, costs, and tips.
+    expected_output: A comprehensive day-by-day travel plan with timestamps, locations, prices, links, and cost breakdowns.
 
   - name: book_travel
     description: |
       Book flights and accommodations for the planned trip using the itinerary details.
-      Provide confirmation numbers, prices, hotel names, flight times, and links.
+      Use SerperDevTool to find available options with lowest prices.
+      Use ScrapeWebsiteTool to extract booking confirmation rules, cancellation policies,
+      and contact details from official websites.
+      Return exact reservation numbers, dates, times, hotel addresses, and payment links.
     agent: booking_agent
-    expected_output: A booking summary with all reservations, prices, and confirmation codes.
+    expected_output: A booking summary with all reservations, confirmation codes, prices, links, and policies.

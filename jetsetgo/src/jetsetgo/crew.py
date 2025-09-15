@@ -1,7 +1,7 @@
 # src/JetSetGo/crew.py
 from crewai import Crew
-from src.jetsetgo.config import agents
-from src.jetsetgo.config import tasks
+from src.JetSetGo.config import agents
+from src.JetSetGo.config import tasks
 
 jetsetgo_crew = Crew(
     agents=agents,

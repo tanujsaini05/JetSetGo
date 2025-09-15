@@ -1,23 +1,19 @@
 [project]
-name = "jetsetgo"
+name = "JetSetGo"
 version = "0.1.0"
-description = "JetSetGo using crewAI"
-authors = [{ name = "Your Name", email = "you@example.com" }]
-requires-python = ">=3.10,<3.14"
+description = "AI Trip Planner using CrewAI and Gemini 1.5 Flash"
+authors = [{ name = "Tanuj", email = "sainisab264319@gmail.com"}]
 dependencies = [
-    "crewai[tools]>=0.177.0,<1.0.0"
+    "crewai[tools]",
+    "fastapi",
+    "uvicorn",
+    "python-dotenv",
 ]
 
-[project.scripts]
-jetsetgo = "jetsetgo.main:run"
-run_crew = "jetsetgo.main:run"
-train = "jetsetgo.main:train"
-replay = "jetsetgo.main:replay"
-test = "jetsetgo.main:test"
+[tool.uvicorn]
+host = "0.0.0.0"
+port = 8000
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
-[tool.crewai]
-type = "crew"
